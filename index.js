@@ -25,9 +25,9 @@ app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  res.send("middleware-api");
+  res.send("api-Icei");
 });
 
 app.listen(port, () => {
-  console.log(`Middleware-API listening at http://localhost:${port}`);
+  console.log(`API-Icei listening at http://localhost:${port}`);
 });
