@@ -6,6 +6,7 @@ const cors = require("cors");
 // require("./utility/redis");
 
 const { sequelize } = require("./connection");
+const Api = require("./route/api");
 
 sequelize
   .authenticate()
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/api", Api);
 
 app.get("/", (req, res) => {
   res.send("api-Icei");
