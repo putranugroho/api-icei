@@ -8,7 +8,7 @@ let host = process.env.DBHOST;
 
 const sequelize = new Sequelize(name, username, pass, {
   host,
-  dialect: "postgres",
+  dialect: "mysql",
   logging: (...msg) => console.log(DateTime() + " ----- " + msg),
   pool: {
     max: 10000,

@@ -3,10 +3,10 @@ const app = express();
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const cors = require("cors");
-// require("./utility/redis");
 
 const { sequelize } = require("./connection");
 const Api = require("./route/api");
+const Kerjasama = require("./router/kerjasama");
 
 sequelize
   .authenticate()
@@ -25,8 +25,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", Api);
+app.use("/kerjasama", Kerjasama);
 
-app.get("/", (req, res) => {
+app.get("/", (res) => {
   res.send("api-Icei");
 });
 
