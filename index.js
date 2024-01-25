@@ -5,7 +5,7 @@ require("dotenv").config();
 const cors = require("cors");
 
 const { sequelize } = require("./connection");
-const Api = require("./route/api");
+const Api = require("./router/api");
 const Kerjasama = require("./router/kerjasama");
 
 sequelize

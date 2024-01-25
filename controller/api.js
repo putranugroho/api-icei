@@ -1,5 +1,5 @@
 // const axios = require("../Services/API");
-const db = require("../dbConnect");
+const db = require("../connection");
 const moment = require("moment");
 moment.locale("id");
 
